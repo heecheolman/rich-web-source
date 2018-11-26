@@ -1,0 +1,20 @@
+/* main.scss
+
+* scss 를 병합해주는 main.scss 파일
+* src/main.js 에서 import 해줌
+
+*/
+
+
+/* base */
+@import './base/common';
+
+/* components */
+@import './components/components';
+
+/* layout */
+@import './layout/flex';
+
+/* pages */
+@import './pages/chat-room-page';
+@import './pages/chat-list-page';

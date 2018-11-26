@@ -1,0 +1,20 @@
+/* components.scss
+
+* chat-list-page 에 존재하는 components
+* chat-room-page 에 존재하는 components
+
+* 페이지명/컴포넌트.scss 로 import 합니다.
+  * 컴포넌트.scss 파일 내에는 관련된 컴포넌트들이 존재할 수 있습니다.
+
+ */
+
+
+/* chat-list-page */
+@import './chat-list-page/main-title';
+@import './chat-list-page/new-message';
+@import './chat-list-page/room-lists';
+
+/* chat-room-page */
+@import './chat-room-page/room-header__section';
+@import './chat-room-page/room-contents__section';
+@import './chat-room-page/room-send-box__section';

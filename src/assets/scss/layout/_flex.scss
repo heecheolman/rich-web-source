@@ -1,0 +1,60 @@
+/* _flex.scss
+
+* flex 레이아웃을 구성하는데 필요한 클래스들을 모아놓습니다.
+
+* 주축을 인라인방향으로 하였을때의 기준으로 기술하였습니다.
+
+* flex-container: flex 컨테이너로 만들어줍니다.
+* flex-center-sort: 좌우, 상하 정렬을 해줍니다.
+* flex-between-sort: 좌우정렬시 좌우 끝을 기준으로 여백을 줍니다.
+* flex-v-center: 상하정렬을 가운데로 줍니다.
+* flex-row: 자식요소들을 가로로 정렬합니다.
+* flex-column: 자식요소들을 세로로 정렬합니다.
+
+* flex-align-left: 채팅방에서 상대방 메세지를 왼쪽으로 정렬해줍니다.
+* flex-align-right: 채팅방에서 나의 메세지를 오른쪽으로 정렬해줍니다.
+* flex-align-bottom: 채팅방의 채팅컴포넌트에 존재하는 타임스탬프를 하단으로 정렬해줍니다.
+
+*/
+
+.flex-container {
+  display: flex;
+}
+
+.flex-center-sort {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between-sort {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-v-center {
+  align-items: center;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-align-left {
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-align-right {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: end;
+}
+
+.flex-align-bottom {
+  align-self: flex-end;
+}

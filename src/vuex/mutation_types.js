@@ -1,0 +1,13 @@
+/* mutation_types.js
+
+* 이벤트 이름 상수화
+
+*/
+
+export const FETCH_FRIEND_LIST = 'FETCH_FRIEND_LIST';
+export const FETCH_CHAT_DATA = 'FETCH_CHAT_DATA';
+export const FETCH_MY_PROFILE = 'FETCH_MY_PROFILE';
+export const FETCH_OTHER_PROFILE = 'FETCH_OTHER_PROFILE';
+export const UPDATE_TYPED_TEXT = 'UPDATE_TYPED_TEXT';
+export const CLEAR_TEXT_INPUT_AREA = 'CLEAR_TEXT_INPUT_AREA';
+export const CREATE_MESSAGE_TOKEN = 'CREATE_MESSAGE_TOKEN';

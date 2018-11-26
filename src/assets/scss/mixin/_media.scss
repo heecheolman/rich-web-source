@@ -1,0 +1,35 @@
+/* _media.scss
+
+* 반응형 웹을 구현하기 위한 mixin
+
+* 기준 사이즈 정의
+* 640px
+* 425px
+* 375px
+
+*/
+
+$mob-l-width: 640px;
+$mob-m-width: 425px;
+$mob-s-width: 375px;
+
+// 모바일 large
+@mixin mob-large {
+  @media screen and (max-width: #{$mob-l-width}) {
+    @content;
+  }
+}
+
+// 모바일 mid
+@mixin mob-mid {
+  @media screen and (max-width: #{$mob-m-width}) {
+    @content;
+  }
+}
+
+// 모바일 small
+@mixin mob-small {
+  @media screen and (max-width: #{$mob-s-width}) {
+    @content;
+  }
+}

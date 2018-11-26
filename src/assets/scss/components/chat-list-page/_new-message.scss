@@ -1,0 +1,44 @@
+/* _new-message.scss
+
+* chat-list-page 의 new message 컴포넌트입니다.
+
+*/
+
+@import '../../mixin/media';
+
+.new-message-wrap {
+  width: 100%;
+  height: 95px;
+  background: linear-gradient(to right, #8d88f6, #7ba6f7);
+  text-align: center;
+  line-height: 95px;
+
+  .new-message {
+    color: #f8f9fe;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+}
+
+/* media query */
+
+@include mob-large {
+  .new-message-wrap {
+    height: 50px;
+    line-height: 50px;
+  }
+}
+
+@include mob-mid {
+  .new-message-wrap {
+    height: 50px;
+    line-height: 50px;
+  }
+}
+
+@include mob-small {
+  .new-message-wrap {
+    height: 50px;
+    line-height: 50px;
+  }
+}

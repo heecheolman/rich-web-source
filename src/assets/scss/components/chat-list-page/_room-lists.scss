@@ -1,0 +1,251 @@
+/* _room-lists.scss
+
+* chat-list-page 의 방 목록들을 구성하는 컴포넌트입니다.
+
+* $point-color : 방 이름의 색상입니다.
+* $sub-color:   방 이름 외에 '최근메세지', '타임스탬프'의 색상입니다.
+
+* profile-image: 상대방의 프로필이미지를 나타내는 컴포넌트입니다.
+* username: 상대방의 이름을 나타내는 컴포넌트입니다.
+* current-message: 해당 채팅방의 최근 메세지를 미리보기로 보여주는 컴포넌트입니다.
+* current-time: 해당 채팅방의 최근 메세지에 대한 시간을 보여주는 컴포넌트입니다.
+
+
+* 모바일 사이즈에 따른 목록리스트 높이 조절 변수
+* $room-list-height-mob-l
+* $room-list-height-mob-m
+* $room-list-height-mob-s
+
+*/
+
+@import '../../mixin/media';
+
+$point-color: #424561;
+$sub-color: #a09fa4;
+
+$room-list-height-mob-l: 120px;
+$room-list-height-mob-m: 100px;
+$room-list-height-mob-s: 90px;
+
+.room-lists-wrap {
+  width: 100%;
+  height: 705px;
+  overflow-y: scroll;
+
+  .room-list-wrap {
+    width: 100%;
+    height: 130px;
+    background-color: #ffffff;
+
+    &:hover {
+      cursor: pointer;
+      background: rgba(225, 225, 244, 0.16);
+    }
+
+    .profile-image-wrap {
+      display: inline-block;
+      width: 130px;
+      height: 130px;
+
+      .profile-image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .chat-preview-wrap {
+      width: 370px;
+      height: 100%;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(215, 215, 215, 0.42);
+
+      .current-time-wrap {
+        width: 100%;
+        text-align: right;
+        padding-right: 25px;
+
+        .current-time {
+          display: block;
+          font-size: 14px;
+          color: $sub-color;
+        }
+      }
+
+      .username-wrap {
+        width: 100%;
+        height: 35px;
+        padding: 0 25px;
+        line-height: 35px;
+
+        .username {
+          font-size: 1.4rem;
+          font-weight: bold;
+          color: $point-color;
+        }
+      }
+
+      .current-message-wrap {
+        width: 100%;
+        height: 20px;
+        padding: 0 25px;
+
+        .current-message {
+          display: inline-block;
+          width: 100%;
+          color: $sub-color;
+          font-size: 15px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+
+/* media query */
+
+
+@include mob-large {
+  .room-lists-wrap {
+    width: 100vw;
+    height: calc(100vh - 100px);
+
+    .room-list-wrap {
+      width: 100%;
+      height: $room-list-height-mob-l;
+
+      .profile-image-wrap {
+        width: $room-list-height-mob-l;
+        height: 100%;
+
+        .profile-image {
+          width: auto;
+          height: 100%;
+        }
+      }
+
+      .chat-preview-wrap {
+        width: calc(100% - #{$room-list-height-mob-l});
+        padding: 15px 0;
+
+        .current-time-wrap {
+          padding-right: 20px;
+
+          .current-time {
+            font-size: 12px;
+          }
+        }
+
+        .username-wrap {
+          height: 30px;
+          line-height: 30px;
+          padding: 0 20px;
+
+          .username {
+            font-size: 1.2rem;
+          }
+        }
+
+        .current-message-wrap {
+          padding: 0 20px;
+
+          .current-message {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mob-mid {
+  .room-lists-wrap {
+    .room-list-wrap {
+      height: $room-list-height-mob-m;
+
+      .profile-image-wrap {
+        width: $room-list-height-mob-m;
+
+      }
+
+      .chat-preview-wrap {
+        width: calc(100% - #{$room-list-height-mob-m});
+        padding: 15px 0;
+
+        .current-time-wrap {
+          padding-right: 20px;
+
+          .current-time {
+            font-size: 12px;
+          }
+        }
+
+        .username-wrap {
+          height: 30px;
+          line-height: 30px;
+          padding: 0 20px;
+
+          .username {
+            font-size: 1.2rem;
+          }
+        }
+
+        .current-message-wrap {
+          padding: 0 20px;
+
+          .current-message {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mob-small {
+  .room-lists-wrap {
+    width: 100vw;
+    height: calc(100vh - 100px);
+
+    .room-list-wrap {
+      height: $room-list-height-mob-s;
+
+      .profile-image-wrap {
+        width: $room-list-height-mob-s;
+      }
+
+      .chat-preview-wrap {
+        width: calc(100% - #{$room-list-height-mob-s});
+        padding: 8px 0;
+
+        .current-time-wrap {
+          padding-right: 15px;
+
+          .current-time {
+            font-size: 10px;
+          }
+        }
+
+        .username-wrap {
+          height: 30px;
+          line-height: 30px;
+          padding: 0 15px;
+
+          .username {
+            font-size: 1.1rem;
+          }
+        }
+
+        .current-message-wrap {
+          padding: 0 15px;
+
+          .current-message {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
